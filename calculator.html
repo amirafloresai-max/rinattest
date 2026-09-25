@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Калькулятор мероприятия — Ринат</title>
+  <meta name="description" content="Соберите своё мероприятие: ведущий, музыка, шоу, фото, декор — и получите предварительную смету сразу.">
+  <meta name="theme-color" content="#07070a">
+  <link rel="icon" href="assets/img/rinat-avatar.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="lights" aria-hidden="true"></div>
+
+  <div class="page">
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="index.html" aria-label="На главную"><b>РИНАТ</b><span>ведущий мероприятий</span></a>
+        <nav class="nav" aria-label="Основное меню">
+          <a href="index.html#about">Обо мне</a>
+          <a href="index.html#services">Услуги</a>
+          <a href="index.html#reviews">Отзывы</a>
+          <a href="calculator.html" class="active">Калькулятор</a>
+        </nav>
+        <a class="header-phone" data-site-href="phoneHref" href="#"><span data-icon="phone" data-size="16"></span><span data-site="phone"></span></a>
+        <a class="btn btn-ghost btn-sm" href="index.html"><span data-icon="arrowLeft" data-size="14"></span> Во вселенную</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="container calc-intro">
+        <span class="eyebrow center">Конструктор мероприятия</span>
+        <h1>Соберите <span class="gold-text">своё событие</span></h1>
+        <p class="lead">Выберите площадку и формат, отметьте нужные услуги и сразу получите предварительную смету. Всё остальное Ринат возьмёт на себя.</p>
+        <p class="note" data-site="depositNote"></p>
+
+        <div class="pick">
+          <h3>Где пройдёт мероприятие?</h3>
+          <div class="pick-grid" id="venue-grid"></div>
+        </div>
+        <div class="pick">
+          <h3>Что планируете?</h3>
+          <div class="pick-grid" id="type-grid"></div>
+        </div>
+
+        <div class="start-wrap">
+          <button type="button" class="btn btn-gold" id="start-btn" disabled>Собрать моё мероприятие</button>
+          <small id="start-hint">Выберите площадку и формат, чтобы начать</small>
+        </div>
+      </section>
+
+      <section class="container builder" id="builder" hidden>
+        <div class="tabs" id="tabs" role="tablist" aria-label="Шаги конструктора"></div>
+        <div id="panel"></div>
+        <div class="panel-nav">
+          <button type="button" class="btn btn-ghost" id="prev-btn">← Назад</button>
+          <button type="button" class="btn btn-gold" id="next-btn">Далее →</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© Ринат, ведущий мероприятий</span>
+        <span class="demo-note">Демо-версия. Цены примерные и не являются офертой.</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Нижняя панель итога -->
+  <div class="summary-bar" id="summary-bar" aria-live="polite">
+    <div class="container">
+      <div class="sb-total"><small>Предварительно</small><b id="sb-total">0 ₽</b></div>
+      <div class="sb-meta" id="sb-meta"></div>
+      <div class="sb-actions">
+        <button type="button" class="btn btn-gold" id="open-estimate">Смета и заявка</button>
+        <button type="button" class="btn btn-ghost" data-ask="У меня вопрос по расчёту мероприятия">Вопрос</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно сметы -->
+  <div class="modal" id="estimate-modal" role="dialog" aria-modal="true" aria-labelledby="estimate-title">
+    <div class="modal-box">
+      <button type="button" class="modal-close" data-close aria-label="Закрыть"><span data-icon="close" data-size="16"></span></button>
+      <div id="estimate-content"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/calculator.js"></script>
+</body>
+</html>

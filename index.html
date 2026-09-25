@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ринат — ведущий мероприятий</title>
+  <meta name="description" content="Ринат — ведущий свадеб, корпоративов и деловых мероприятий. Рассчитайте стоимость мероприятия онлайн.">
+  <meta name="theme-color" content="#07070a">
+  <link rel="icon" href="assets/img/rinat-avatar.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="lights" aria-hidden="true"></div>
+
+  <div class="page">
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="#top" aria-label="На главную"><b>РИНАТ</b><span>ведущий мероприятий</span></a>
+        <nav class="nav" aria-label="Основное меню">
+          <a href="#about">Обо мне</a>
+          <a href="#services">Услуги</a>
+          <a href="#gallery">Портфолио</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+        <a class="header-phone" data-site-href="phoneHref" href="#"><span data-icon="phone" data-size="16"></span><span data-site="phone"></span></a>
+        <a class="btn btn-gold btn-sm" href="calculator.html">Рассчитать</a>
+      </div>
+    </header>
+
+    <!-- ================= ГЛАВНЫЙ ВИД ================= -->
+    <main id="view-hub">
+      <section class="hub" id="top">
+        <div class="hub-head">
+          <span class="eyebrow center">Добро пожаловать во вселенную</span>
+          <h1>Ринат · <span class="gold-text">вселенная событий</span></h1>
+          <p>Свадьбы, корпоративы и деловые события. Выберите планету, чтобы узнать больше, или сразу соберите своё мероприятие в калькуляторе.</p>
+        </div>
+
+        <div class="hub-prompt">
+          <span>Выберите планету</span>
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4v10m0 0-4-4m4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="orbit-area" id="orbit">
+          <div class="orbit-ring r1"></div>
+          <div class="orbit-ring r2"></div>
+          <button type="button" class="hero-person" id="hero-person" aria-label="О Ринате">
+            <img src="assets/img/rinat.webp" alt="Ринат — ведущий мероприятий" draggable="false">
+            <span class="person-tag">Обо мне</span>
+          </button>
+        </div>
+
+        <div class="hub-cta">
+          <a class="btn btn-gold" href="calculator.html">Рассчитать мероприятие</a>
+          <a class="btn btn-ghost" href="#" data-ask="Хочу забронировать дату">Забронировать дату</a>
+          <a class="btn btn-ghost" data-site-href="telegram" href="#" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn btn-ghost" href="#" data-ask="">Задать вопрос</a>
+        </div>
+        <a class="scroll-hint" href="#about">Листайте вниз ↓</a>
+      </section>
+
+      <!-- Обо мне -->
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <div class="about-photo">
+            <img src="assets/img/rinat.webp" alt="Ринат" loading="lazy">
+            <div class="badge"><b>300+</b><span>мероприятий</span></div>
+          </div>
+          <div class="about-text">
+            <span class="eyebrow">Обо мне</span>
+            <div class="section-head" style="margin-bottom:24px">
+              <h2>Ведущий, который <span class="gold-text">чувствует зал</span></h2>
+            </div>
+            <p>Меня зовут Ринат. Я веду свадьбы, корпоративы, юбилеи и деловые события: от камерных вечеров до сцен бизнес-сообществ.</p>
+            <p>Моя задача — чтобы гостям было легко и интересно, а вам — спокойно. Сценарий, тайминг и связка всех подрядчиков — на мне.</p>
+            <div class="stats">
+              <div class="stat"><b class="gold-text">8</b><span>лет на сцене</span></div>
+              <div class="stat"><b class="gold-text">300+</b><span>мероприятий</span></div>
+              <div class="stat"><b class="gold-text">4.9</b><span>средняя оценка</span></div>
+            </div>
+            <a class="btn btn-gold" href="calculator.html">Рассчитать стоимость</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Услуги -->
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow center">Услуги</span>
+            <h2>Форматы мероприятий</h2>
+            <p>Каждый формат — отдельная планета. Нажмите, чтобы узнать подробности.</p>
+          </div>
+          <div class="services-grid" id="services-grid"></div>
+        </div>
+      </section>
+
+      <!-- Портфолио -->
+      <section class="section" id="gallery">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow center">Портфолио</span>
+            <h2>Моменты с мероприятий</h2>
+            <p>Здесь будут фото и видео с реальных событий Рината.</p>
+          </div>
+          <div class="gallery">
+            <div class="ph" data-ph="Видео-визитка"></div>
+            <div class="ph" data-ph="Свадьба"></div>
+            <div class="ph" data-ph="Корпоратив"></div>
+            <div class="ph" data-ph="Бизнес-форум"></div>
+            <div class="ph" data-ph="Юбилей"></div>
+            <div class="ph" data-ph="Выпускной"></div>
+            <div class="ph" data-ph="Бэкстейдж"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Отзывы -->
+      <section class="section" id="reviews">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow center">Отзывы</span>
+            <h2>Что говорят клиенты</h2>
+          </div>
+          <div class="reviews">
+            <article class="card review">
+              <div class="stars" data-stars></div>
+              <p>«Гости до сих пор вспоминают нашу свадьбу. Ни одного неловкого конкурса, только тепло и смех. Спасибо за идеальный вечер!»</p>
+              <div class="who"><i>А</i><div><b>Анна и Дмитрий</b><span>Свадьба, 120 гостей</span></div></div>
+            </article>
+            <article class="card review">
+              <div class="stars" data-stars></div>
+              <p>«Провели новогодний корпоратив на 250 человек. Всё чётко по таймингу, команда в восторге. Берём на следующий год.»</p>
+              <div class="who"><i>Е</i><div><b>Екатерина</b><span>HR-директор, IT-компания</span></div></div>
+            </article>
+            <article class="card review">
+              <div class="stars" data-stars></div>
+              <p>«Ринат вёл наш бизнес-форум: модерация панелей, награждение, нетворкинг. Профессионально и с харизмой.»</p>
+              <div class="who"><i>М</i><div><b>Михаил</b><span>Организатор бизнес-сообщества</span></div></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow center">Вопросы</span>
+            <h2>Частые вопросы</h2>
+          </div>
+          <div class="faq">
+            <details><summary>Как забронировать дату?</summary><p>Оставьте заявку через калькулятор или ассистента. После созвона заключаем договор, дата бронируется после предоплаты 30%.</p></details>
+            <details><summary>Сколько стоит ведение?</summary><p>От 35 000 ₽ за деловое событие до 60 000 ₽ за свадьбу. Точную стоимость со всеми услугами покажет калькулятор.</p></details>
+            <details><summary>Работаете в других городах?</summary><p>Да. По Москве выезд бесплатный, по области — 5 000 ₽, другие города рассчитываются индивидуально.</p></details>
+            <details><summary>Можно ли организовать всё под ключ?</summary><p>Да: DJ, звук и свет, артисты, фото и видео, декор и подбор площадки. Всё это можно отметить в калькуляторе.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Контакты -->
+      <section class="section" id="contacts">
+        <div class="container">
+          <div class="cta-block">
+            <span class="eyebrow center">Давайте обсудим</span>
+            <h2>Соберите своё мероприятие за 2 минуты</h2>
+            <p>Выберите формат и услуги в калькуляторе и получите предварительную смету сразу, без ожидания менеджера.</p>
+            <div class="row">
+              <a class="btn btn-gold" href="calculator.html">Открыть калькулятор</a>
+              <a class="btn btn-ghost" href="#" data-ask="">Спросить ассистента</a>
+            </div>
+          </div>
+          <div class="contacts" style="margin-top:16px">
+            <a class="card" data-site-href="phoneHref" href="#"><span>Телефон</span><b data-site="phone"></b></a>
+            <a class="card" data-site-href="telegram" href="#" target="_blank" rel="noopener"><span>Telegram / WhatsApp</span><b>Написать в мессенджер</b></a>
+            <div class="card"><span>География</span><b data-site="city"></b></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= СТРАНИЦА ПЛАНЕТЫ ================= -->
+    <main id="view-detail" hidden></main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© Ринат, ведущий мероприятий</span>
+        <span class="demo-note">Демо-версия сайта. Тексты, отзывы и цены — примеры.</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/hub.js"></script>
+</body>
+</html>
